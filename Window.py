@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox as message
 from tkinter import filedialog as fd
 from Stack import *
+from view import addRightClickMenu
 
 
 #  Class Window is used for managing all the operations in TextEditor
@@ -101,6 +102,7 @@ class Window:
         # that file
         self.UStack = Stack(self.TextBox.get("1.0", "end-1c"))
         self.RStack = Stack(self.TextBox.get("1.0", "end-1c"))
+        addRightClickMenu(self.window, {"hello": lambda: None})
 
     #     Member Functions
     # 1. New File method which creates a new file
